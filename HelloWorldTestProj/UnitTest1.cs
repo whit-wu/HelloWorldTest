@@ -2,14 +2,18 @@ namespace HelloWorldTestProj
 {
     public class UnitTest1
     {
+       
         [Fact]
-        public void Test1()
+        public void HelloThere_CallMethod_ReturnString()
         {
+            // arrange
             Hello hello = new Hello();
 
+            // act
             var result = hello.HelloThere();
 
-            Assert.Equal("General Kenobi!", result);
+            // assert   
+            Assert.True(result.Count() > 0);
         }
     }
 }
